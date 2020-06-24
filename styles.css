@@ -1,0 +1,118 @@
+.topbar {
+    text-align: center;
+    background-color: #333333;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 150px auto auto
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 5% 10% 5% 10%;
+}
+
+#locations, #departments {
+    
+    font-family: 'Poppins', sans-serif;
+}
+#departments{
+    text-align: end;
+} 
+
+button, option {
+    font-family: 'Poppins', sans-serif;
+}
+
+.locationButton {
+    padding: 10px 20px 10px 20px;
+    margin-left: 10px;
+    background-color: none;
+    border: none;
+    border-bottom: 3px solid #333333;
+    transition: 1s;
+    margin-bottom: 10px;
+}
+
+.active {
+    background-color: #1982C4;
+    color:white;
+    border-bottom: 3px solid #5DD9C1;
+}
+
+button:hover {
+    border-bottom: 3px solid #5DD9C1;
+    transition: 0.5s;
+}
+
+select {
+    padding: 12px 20px 10px 20px;
+}
+
+main {
+    background-color: #f6f6f6;
+}
+
+#jobscontainer {
+    padding: 5% 10%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr)
+}
+
+.jobDiv {
+    width: 80%;
+    height: 80%;
+    padding: 10px;
+    background-color: white;
+    cursor: pointer;
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr;
+    border-bottom: 3px solid #333333;
+    transition: 0.5s;
+    padding: 20px;
+    animation: slide-in 0.5s;
+    margin: 0 auto;
+}
+
+.jobDiv:hover {
+    border-bottom: 3px solid #5DD9C1;
+    transition: 0.5s;
+    box-shadow: 1px 1px 32px 0px rgba(0,0,0,0.24);
+    
+}
+
+h4, p {
+    font-family: 'Poppins', sans-serif;   
+}
+
+h4 {
+    color: #1982C4;
+    font-size: 24px;
+    margin-top: 0px;
+}
+
+.jobTitle, .jobLocation, .jobDepartments {
+    padding: 10px;
+}
+
+.jobDepartments {
+    opacity: 0.7;
+    font-size: 12px;
+}
+
+.companySelect {
+    height: 40px;
+    width: 200px;
+    
+}
+
+.topbartext {
+    color: white;
+}
+
+@keyframes slide-in{
+    from{margin-top: 300px;}
+    to{margin-top: 0}
+}
