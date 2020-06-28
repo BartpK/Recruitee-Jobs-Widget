@@ -83,8 +83,12 @@ main {
     
 }
 
-h4, p {
+h4, p, h2 {
     font-family: 'Poppins', sans-serif;   
+}
+
+p {
+    color: white;
 }
 
 h4 {

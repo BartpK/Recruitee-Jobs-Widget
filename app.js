@@ -1,13 +1,23 @@
 const locationsContainer = document.querySelector("#locations");
 const departmentsDropdown = document.querySelector("#departmentsdropdown");
 const jobsContainer = document.querySelector("#jobscontainer");
-const companySelect = document.querySelector(".companySelect")
+const companySelect = document.querySelector(".companySelect");
+const urlInput = document.querySelector("#urlPasteInput");
+const getJobsButton = document.querySelector("#getJobsButton");
 
 let locations = [];
 let departments = [];
 let jobsArray = [];
 let selectedLocation = "";
 let selectedDepartment = "";
+
+//Getjobsbutton clears location and department filters and call getJobs function with user input as argument
+getJobsButton.addEventListener("click", () => {
+    selectedDepartment = "";
+    selectedLocation = "";
+    getJobs(`${urlInput.value}/api/offers`);
+})
+
 
 //Company dropdown clears all active filters and calls getJobs function with API url passed as parameter
 companySelect.addEventListener("change", () => {
